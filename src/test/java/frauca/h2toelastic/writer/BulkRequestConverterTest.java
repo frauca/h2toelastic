@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class BulkRequestConverterTest {
 
     @Spy
-    BulkRequestConverter converter = new BulkRequestConverter();
+    BulkRequestConverter converter = new BulkRequestConverter("test");
 
     @Test
     public void indexName() {

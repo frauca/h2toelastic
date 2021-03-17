@@ -1,6 +1,6 @@
 spring:
   r2dbc:
-    url: r2dbc:h2:file:///D:/excel_parser/data_h2/devDb?options=DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    url: r2dbc:h2:file:///./devDb?options=DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     name: sa
     password:
   data:

@@ -1,7 +1,11 @@
 package frauca.h2toelastic;
 
+import frauca.h2toelastic.loader.Loader;
 import frauca.h2toelastic.loader.R2dbcLoaderService;
 import frauca.h2toelastic.transfer.TransferService;
+import frauca.h2toelastic.writer.BulkRequestConverter;
+import frauca.h2toelastic.writer.ElasticWriter;
+import frauca.h2toelastic.writer.Writer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.CommandLineRunner;
@@ -9,9 +13,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import reactor.core.publisher.Flux;
-
-import java.util.Map;
+import org.springframework.data.elasticsearch.client.reactive.ReactiveElasticsearchClient;
+import org.springframework.data.r2dbc.core.DatabaseClient;
 
 @SpringBootApplication
 @Slf4j
@@ -19,7 +22,7 @@ public class H2toelasticApplication {
 
     final TransferService service;
 
-    public H2toelasticApplication(TransferService service, ApplicationArguments arguments) {
+    public H2toelasticApplication(TransferService service) {
         this.service = service;
     }
 

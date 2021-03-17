@@ -5,7 +5,6 @@ import frauca.h2toelastic.writer.Writer;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
-@Service
 public class TransferService {
     private final Loader loader;
     private final Writer writer;

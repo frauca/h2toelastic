@@ -10,7 +10,6 @@ import reactor.core.publisher.Mono;
 
 import java.util.Map;
 
-@Service
 @Slf4j
 public class ElasticWriter implements Writer {
     final ReactiveElasticsearchClient client;

@@ -10,7 +10,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Map;
 
-@Service
 public class R2dbcLoaderService implements Loader {
     final DatabaseClient client;
 

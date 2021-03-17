@@ -36,4 +36,5 @@ build/
 /.mvn/
 queryToTransfer.sql
 
+*.csv
 
